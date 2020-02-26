@@ -27,7 +27,7 @@
     <ErrorReportUrl>https://github.com/TheTianBao/sea-of-thieves---cooking-buddy</ErrorReportUrl>
     <ProductName>sea of thieves - cooking buddy</ProductName>
     <PublisherName>TianBao</PublisherName>
-    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -149,6 +149,8 @@
     <None Include="Resources\Help.png" />
     <None Include="Resources\GitHub1.png" />
     <None Include="Resources\Donation.png" />
+    <None Include="Resources\Frying_pan.mp3" />
+    <None Include="Resources\Frying_pan_wav.wav" />
     <Content Include="SOTicon.ico" />
   </ItemGroup>
   <ItemGroup>

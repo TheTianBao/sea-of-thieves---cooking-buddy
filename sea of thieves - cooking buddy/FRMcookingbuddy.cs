@@ -10,12 +10,15 @@ using System.Windows.Forms;
 
 namespace sea_of_thieves___cooking_buddy
 {
+    
     public partial class FRMcookingbuddy : Form
     {
         public FRMcookingbuddy()
+            
         {
             InitializeComponent();
         }
+        
 
         #region "CMD"
         private void CMDcookFish_Click(object sender, EventArgs e)
@@ -91,41 +94,53 @@ namespace sea_of_thieves___cooking_buddy
         #region "Timer End"
         private void TIMERbasicFish_Tick(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
+            //this.WindowState = FormWindowState.Normal;
             CMDcookFish.Enabled = true;
             CMDcookFishAbort.Enabled = false;
             TIMERbasicFish.Stop();
             LBLbasicFishStatus.ForeColor = Color.Red;
             //MessageBox.Show("The basic fish is finished.");
+            System.IO.Stream SoundFile = Properties.Resources.Frying_pan_wav;
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(SoundFile);
+            player.Play();
         }
         private void TIMERbasicMeat_Tick(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
+            //this.WindowState = FormWindowState.Normal;
             CMDcookMeat.Enabled = true;
             CMDcookMeatAbort.Enabled = false;
             TIMERbasicMeat.Stop();
             LBLbMeatStatus.ForeColor = Color.Red;
             //MessageBox.Show("The basic meat is finished.");
+            System.IO.Stream SoundFile = Properties.Resources.Frying_pan_wav;
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(SoundFile);
+            player.Play();
         }
 
         private void TIMERtrophyFish_Tick(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
+            //this.WindowState = FormWindowState.Normal;
             CMDcookTFish.Enabled = true;
             CMDcookTFishAbort.Enabled = false;
             TIMERtrophyFish.Stop();
             LBLtFischStatus.ForeColor = Color.Red;
             //MessageBox.Show("The trophy fish is finished.");
+            System.IO.Stream SoundFile = Properties.Resources.Frying_pan_wav;
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(SoundFile);
+            player.Play();
         }
 
         private void TIMERmonsterMeat_Tick(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Normal;
+           //this.WindowState = FormWindowState.Normal;
             CMDcookMeat.Enabled = true;
             CMDcookMeatAbort.Enabled = false;
             TIMERmonsterMeat.Stop();
             LBLmMeatStatus.ForeColor = Color.Red;
             //MessageBox.Show("The monster meat is finished.");
+            System.IO.Stream SoundFile = Properties.Resources.Frying_pan_wav;
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(SoundFile);
+            player.Play();
         }
 
 
@@ -133,7 +148,9 @@ namespace sea_of_thieves___cooking_buddy
 
         private void FRMcookingbuddy_Load(object sender, EventArgs e)
         {
-
+            System.IO.Stream SoundFile = Properties.Resources.Frying_pan_wav;
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer(SoundFile);
+            player.Play();
         }
 
         #region "CMS"
