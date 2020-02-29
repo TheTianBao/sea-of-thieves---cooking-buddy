@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace sea_of_thieves___cooking_buddy
 {
     
@@ -178,6 +179,34 @@ namespace sea_of_thieves___cooking_buddy
         {
             System.Diagnostics.Process.Start("https://seaofthieves.fandom.com/wiki/Sea_of_Thieves_Wiki");
         }
+
         #endregion
+
+        private void FRMcookingbuddy_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            String Keypressed;
+
+            Keypressed = e.KeyChar.ToString();
+
+           
+            if (Keypressed == "1")
+            {
+                CMDcookFish.PerformClick();
+            }
+            if (Keypressed == "2")
+            {
+                CMDcookMeat.PerformClick();
+            }
+            if (Keypressed == "3")
+            {
+                CMDcookTFish.PerformClick();
+            }
+            if (Keypressed == "4")
+            {
+                CMDcookMMeat.PerformClick();
+            }
+
+
+        }
     }
-}
+    }

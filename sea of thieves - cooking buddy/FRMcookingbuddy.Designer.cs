@@ -43,6 +43,10 @@
             this.LBLtFischStatus = new System.Windows.Forms.Label();
             this.LBLmMeatStatus = new System.Windows.Forms.Label();
             this.CMS = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.GitHub = new System.Windows.Forms.ToolStripMenuItem();
+            this.PayPal = new System.Windows.Forms.ToolStripMenuItem();
+            this.Reddit = new System.Windows.Forms.ToolStripMenuItem();
+            this.Wiki = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.CMDcookMMeatAbort = new System.Windows.Forms.Button();
             this.CMDcookTFishAbort = new System.Windows.Forms.Button();
@@ -56,10 +60,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.CMDcookFish = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.GitHub = new System.Windows.Forms.ToolStripMenuItem();
-            this.PayPal = new System.Windows.Forms.ToolStripMenuItem();
-            this.Reddit = new System.Windows.Forms.ToolStripMenuItem();
-            this.Wiki = new System.Windows.Forms.ToolStripMenuItem();
             this.CMS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -79,12 +79,12 @@
             // 
             // TIMERtrophyFish
             // 
-            this.TIMERtrophyFish.Interval = 125000;
+            this.TIMERtrophyFish.Interval = 95000;
             this.TIMERtrophyFish.Tick += new System.EventHandler(this.TIMERtrophyFish_Tick);
             // 
             // TIMERmonsterMeat
             // 
-            this.TIMERmonsterMeat.Interval = 95000;
+            this.TIMERmonsterMeat.Interval = 125000;
             this.TIMERmonsterMeat.Tick += new System.EventHandler(this.TIMERmonsterMeat_Tick);
             // 
             // label1
@@ -172,6 +172,38 @@
             this.Wiki});
             this.CMS.Name = "CMS";
             this.CMS.Size = new System.Drawing.Size(190, 92);
+            // 
+            // GitHub
+            // 
+            this.GitHub.Image = global::sea_of_thieves___cooking_buddy.Properties.Resources.GitHub1;
+            this.GitHub.Name = "GitHub";
+            this.GitHub.Size = new System.Drawing.Size(189, 22);
+            this.GitHub.Text = "open github";
+            this.GitHub.Click += new System.EventHandler(this.GitHub_Click);
+            // 
+            // PayPal
+            // 
+            this.PayPal.Image = global::sea_of_thieves___cooking_buddy.Properties.Resources.Donation;
+            this.PayPal.Name = "PayPal";
+            this.PayPal.Size = new System.Drawing.Size(189, 22);
+            this.PayPal.Text = "donate via paypal";
+            this.PayPal.Click += new System.EventHandler(this.PayPal_Click);
+            // 
+            // Reddit
+            // 
+            this.Reddit.Image = global::sea_of_thieves___cooking_buddy.Properties.Resources.Reddit;
+            this.Reddit.Name = "Reddit";
+            this.Reddit.Size = new System.Drawing.Size(189, 22);
+            this.Reddit.Text = "open /r/Seaofthieves/";
+            this.Reddit.Click += new System.EventHandler(this.Reddit_Click);
+            // 
+            // Wiki
+            // 
+            this.Wiki.Image = global::sea_of_thieves___cooking_buddy.Properties.Resources.Help;
+            this.Wiki.Name = "Wiki";
+            this.Wiki.Size = new System.Drawing.Size(189, 22);
+            this.Wiki.Text = "open wiki";
+            this.Wiki.Click += new System.EventHandler(this.Wiki_Click);
             // 
             // button1
             // 
@@ -344,38 +376,6 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             // 
-            // GitHub
-            // 
-            this.GitHub.Image = global::sea_of_thieves___cooking_buddy.Properties.Resources.GitHub1;
-            this.GitHub.Name = "GitHub";
-            this.GitHub.Size = new System.Drawing.Size(189, 22);
-            this.GitHub.Text = "open github";
-            this.GitHub.Click += new System.EventHandler(this.GitHub_Click);
-            // 
-            // PayPal
-            // 
-            this.PayPal.Image = global::sea_of_thieves___cooking_buddy.Properties.Resources.Donation;
-            this.PayPal.Name = "PayPal";
-            this.PayPal.Size = new System.Drawing.Size(189, 22);
-            this.PayPal.Text = "donate via paypal";
-            this.PayPal.Click += new System.EventHandler(this.PayPal_Click);
-            // 
-            // Reddit
-            // 
-            this.Reddit.Image = global::sea_of_thieves___cooking_buddy.Properties.Resources.Reddit;
-            this.Reddit.Name = "Reddit";
-            this.Reddit.Size = new System.Drawing.Size(189, 22);
-            this.Reddit.Text = "open /r/Seaofthieves/";
-            this.Reddit.Click += new System.EventHandler(this.Reddit_Click);
-            // 
-            // Wiki
-            // 
-            this.Wiki.Image = global::sea_of_thieves___cooking_buddy.Properties.Resources.Help;
-            this.Wiki.Name = "Wiki";
-            this.Wiki.Size = new System.Drawing.Size(189, 22);
-            this.Wiki.Text = "open wiki";
-            this.Wiki.Click += new System.EventHandler(this.Wiki_Click);
-            // 
             // FRMcookingbuddy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -405,12 +405,14 @@
             this.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.MaximizeBox = false;
             this.Name = "FRMcookingbuddy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "sea of thieves - cooking buddy";
             this.Load += new System.EventHandler(this.FRMcookingbuddy_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FRMcookingbuddy_KeyPress);
             this.CMS.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
