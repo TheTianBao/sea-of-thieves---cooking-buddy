@@ -134,8 +134,8 @@ namespace sea_of_thieves___cooking_buddy
         private void TIMERmonsterMeat_Tick(object sender, EventArgs e)
         {
            //this.WindowState = FormWindowState.Normal;
-            CMDcookMeat.Enabled = true;
-            CMDcookMeatAbort.Enabled = false;
+            CMDcookMMeat.Enabled = true;
+            CMDcookMMeatAbort.Enabled = false;
             TIMERmonsterMeat.Stop();
             LBLmMeatStatus.ForeColor = Color.Red;
             //MessageBox.Show("The monster meat is finished.");
